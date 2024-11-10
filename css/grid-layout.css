@@ -1,9 +1,10 @@
 @import url("utility.css");
-
+/*worked with this to get it it adjust grid contained based on size of screen. used imbedded grids */
 
 .grid-container {
     display: grid;
-    gap: 2rem;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
 }
   
 .grid-item {
@@ -11,5 +12,34 @@
     border: 1px solid rgba(var(--grid-color), 1);
     border-radius: 1rem;
     padding: 2em;
+}
+.grid-container-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns for child grid */
+    gap: 2rem;
+}
+    /* For medium-sized screens (tablets, etc.) */
+@media (max-width: 768px) {
+    .grid-container-child {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
+
+/* For small screens (phones, etc.) */
+@media (max-width: 480px) {
+    .grid-container-child {
+        grid-template-columns: 1fr; /* Still 1 column, same as for medium screens */
+
+    }
+}
+
+.child-grid-item {
+    background-color: rgba(var(--grid-color), 0.85);
+    border: 5px dotted rgba(var(--grid-color), 90);
+    border-radius: 5rem;
+    padding: 4em;  
+   
+    
+
 }
   

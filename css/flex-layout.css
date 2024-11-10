@@ -1,15 +1,35 @@
 @import url("utility.css");
 
-
-.flex-container {
+/*.parent-flexwrap {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+}*/
+.parent-flex-container {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    font-size: 5;
+    text-align: center;
+    flex-wrap: wrap;
+  /* flex-direction: row; */
+    margin: -10px 0 0 -10px;
     gap: 1rem;
   }
-  
-.flex-item {
+  .flex-item {
+    display: inline-block;
+    background: rgb(102, 102, 174);
+    margin: 10px 0 0 10px;
+    flex-grow: 1;
+    height: 150px;
+    width: calc(100% - 1rem); /* trying to fit to multiple rows?each item takes up % of parent container width? */
+  }
+ /* define this for the boxes */
+.subbox-flex-item {
     background-color: rgba(var(--flex-color), 0.25);
-    border: 1px solid rgba(var(--flex-color), 1);
+    border: 2px dotted rgba(var(--flex-color), 1);
+    margin: 10px 0 0 10px; /*make my margins the same */
     padding: 2em;
     border-radius: 1rem;
-}
+    width: calc(25% - 1rem); /* trying to fit to multiple rows?each item takes up % of parent container width? */
+} 
+

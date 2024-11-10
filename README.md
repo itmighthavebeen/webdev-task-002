@@ -1,6 +1,7 @@
 # TASK: CSS Layouts
 
 ## Web Development Task 002
+## Worked with flexbox and grid - CR
 
 This repository contains the files and instructions for completing Web Development Task 001. Follow the steps below to clone the repository and get started.
 
